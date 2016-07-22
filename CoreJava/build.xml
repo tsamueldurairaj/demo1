@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="CoreJava">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../Selenium WebDriver docs and jar files/eclipse-jee-kepler-SR1-win32/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="CoreJava.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../../../FrameWorkJars/mail.jar"/>
+        <pathelement location="../../../../FrameWorkJars/activation-1.0.2.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="CoreJava.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Arrays">
+        <java classname="javaOOPSConcepts.Arrays" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Constructors">
+        <java classname="javaOOPSConcepts.Constructors" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Demo">
+        <java classname="javaOOPSConcepts.Demo" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Demo1">
+        <java classname="javaOOPSConcepts.Demo1" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Demo2">
+        <java classname="javaOOPSConcepts.Demo2" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Exercise1">
+        <java classname="javaOOPSConcepts.Exercise1" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Exercise2">
+        <java classname="javaOOPSConcepts.Exercise2" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Exercise3">
+        <java classname="javaOOPSConcepts.Exercise3" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Exercise4">
+        <java classname="javaOOPSConcepts.Exercise4" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="InstanceBlocks">
+        <java classname="javaOOPSConcepts.InstanceBlocks" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="InstanceVariable">
+        <java classname="javaOOPSConcepts.InstanceVariable" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Methods">
+        <java classname="javaOOPSConcepts.Methods" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="ParameterizedConstructor">
+        <java classname="javaOOPSConcepts.ParameterizedConstructor" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Practise">
+        <java classname="javaOOPSConcepts.Practise" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="Practise2">
+        <java classname="javaOOPSConcepts.Practise2" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="StaticBlock">
+        <java classname="javaOOPSConcepts.StaticBlock" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="StaticVariable">
+        <java classname="javaOOPSConcepts.StaticVariable" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+    <target name="TwoDimensionalArray">
+        <java classname="javaOOPSConcepts.TwoDimensionalArray" failonerror="true" fork="yes">
+            <classpath refid="CoreJava.classpath"/>
+        </java>
+    </target>
+</project>
